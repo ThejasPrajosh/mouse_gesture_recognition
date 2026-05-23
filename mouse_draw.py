@@ -68,8 +68,7 @@ def checkcorner():
                 last_corner = current_pos
     checkcircle()
     print(corner)
-
-#update this in future , might cause err , usign radius
+#circle detection
 def checkcircle():
     global circle
     if circle == True:
@@ -106,19 +105,19 @@ def detection():
     if circle == False:
         if corner == 0:
             if hor_tot > threshold and ver_tot < tolerance:
-                print("horizontal")
+                print("Shape: Horizontal Line")
             elif ver_tot > threshold and hor_tot < tolerance:
-                print("vertical")
+                print("Shape: Vertical Line")
             else:
-                print("diagonal")
+                print("Shape: Diagonal Line")
         if corner == 2:
-            print("Triangle")
+            print("Shape: Triangle")
         elif corner == 3:
-            print("Rectangle")
+            print("Shape: Rectangle")
         elif corner >4 and end_dist < 50:
-            print(" A very bad Circle")
+            print("Shape: Improper Circle")
     else:
-        print("Its a circle")
+        print("Shape: Proper Circle")
 
 #main loop
 while running:
