@@ -68,11 +68,10 @@ def checkcorner():
                 last_corner = current_pos
     checkcircle()
     print(corner)
-#circle detection
+
+#update this in future , might cause err , usign radius
 def checkcircle():
     global circle
-    if circle == True:
-        pass
     start = mouse_loc[0]
     end = mouse_loc[-1]
     end_dist = math.dist(start,end)
@@ -114,7 +113,7 @@ def detection():
             print("Shape: Triangle")
         elif corner == 3:
             print("Shape: Rectangle")
-        elif corner >4 and end_dist < 50:
+        elif corner >4:
             print("Shape: Improper Circle")
     else:
         print("Shape: Proper Circle")
