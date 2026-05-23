@@ -26,7 +26,7 @@ threshold = 15
 corner = 0
 cor_list = []
 cor_threshold =  40
-smallestangle = 40
+smallestangle = 30
 
 def checkcorner():
     cor_list.clear()
@@ -81,7 +81,7 @@ def checkcircle():
 
 def detection():
     global threshold,corner
-    if len(mouse_loc) < 20:
+    if len(mouse_loc) < 5:
         return
     
     #all x and y values
@@ -103,7 +103,7 @@ def detection():
     
     #tell what shape it is
     if circle == False:
-        if corner == 0:
+        if corner <= 1:
             if hor_tot > threshold and ver_tot < tolerance:
                 print("Shape: Horizontal Line")
             elif ver_tot > threshold and hor_tot < tolerance:
@@ -114,7 +114,7 @@ def detection():
             print("Shape: Triangle")
         elif corner == 3:
             print("Shape: Rectangle")
-        elif corner >4:
+        elif corner >3:
             print("Shape: Improper Circle")
     else:
         print("Shape: Proper Circle")
