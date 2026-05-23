@@ -25,7 +25,7 @@ tolerance = 40
 threshold = 15
 corner = 0
 cor_list = []
-cor_threshold =  30
+cor_threshold =  40
 smallestangle = 40
 
 def checkcorner():
@@ -72,6 +72,7 @@ def checkcorner():
 #update this in future , might cause err , usign radius
 def checkcircle():
     global circle
+    circle = False
     start = mouse_loc[0]
     end = mouse_loc[-1]
     end_dist = math.dist(start,end)
