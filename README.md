@@ -1,3 +1,5 @@
+
+
 # Mouse Gesture Recognition using Pygame
 
 Using Pygame and basic vector calculations to identify shapes drawn by the user.
@@ -103,3 +105,6 @@ The final goal is to integrate the recognition software with OpenCV for an inter
 ---
 
 ## Demo
+<img width="1612" height="541" alt="image" src="https://github.com/user-attachments/assets/558ac906-c215-4022-a45e-8b426a0789b0" />
+<img width="782" height="297" alt="image" src="https://github.com/user-attachments/assets/679e2d00-f531-4551-bb28-991f83c40084" />
+
